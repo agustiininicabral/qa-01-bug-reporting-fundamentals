@@ -1,0 +1,4 @@
+- Como usuario, quiero navegar productos para decidir compra.
+- Como usuario, quiero agregar/quitar items del carrito.
+- Como usuario, quiero completar un checkout.
+- Como usuario, quiero ver mensajes claros ante errores.

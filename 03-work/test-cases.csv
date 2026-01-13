@@ -1,0 +1,46 @@
+id,feature,title,priority,precondition,steps,expected,status
+TC-001,E2E Purchase Flow,Validar escenario 1,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-002,E2E Purchase Flow,Validar escenario 2,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-003,E2E Purchase Flow,Validar escenario 3,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-004,E2E Purchase Flow,Validar escenario 4,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-005,E2E Purchase Flow,Validar escenario 5,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-006,E2E Purchase Flow,Validar escenario 6,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-007,Cart,Validar escenario 7,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-008,Cart,Validar escenario 8,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-009,Cart,Validar escenario 9,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-010,Cart,Validar escenario 10,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-011,UI/Validation,Validar escenario 11,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-012,UI/Validation,Validar escenario 12,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-013,UI/Validation,Validar escenario 13,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-014,UI/Validation,Validar escenario 14,P3,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-015,UI/Validation,Validar escenario 15,P3,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
+2) Ejecutar acción
+3) Validar resultado",Comportamiento esperado según historia de usuario,
