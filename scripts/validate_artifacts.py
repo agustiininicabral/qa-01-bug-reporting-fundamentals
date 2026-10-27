@@ -125,6 +125,15 @@ def validate_results(rows: list[dict[str, str]]) -> list[str]:
                 errors.append(f"Results report must mark {label} as N/A when no cases ran.")
         if "Estado global: **No evaluado**" not in report:
             errors.append("Results report must not claim an execution result before testing.")
+    else:
+        for label in ("Pass", "Fail", "Blocked"):
+            expected_count = sum(
+                (row.get("status") or "").strip() == label for row in rows
+            )
+            if f"- {label}: {expected_count}" not in report:
+                errors.append(
+                    f"Results report must state {expected_count} cases with status {label}."
+                )
 
     return errors
 
