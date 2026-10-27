@@ -74,6 +74,31 @@ class ArtifactValidatorTests(unittest.TestCase):
 
         self.assertTrue(any("1 executed test cases" in error for error in errors))
 
+
+    def test_results_report_must_match_pass_fail_and_blocked_counts(self) -> None:
+        rows = [
+            {"status": "Pass"},
+            {"status": "Fail"},
+            {"status": "Blocked"},
+            {"status": "Not executed"},
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "report.md"
+            path.write_text(
+                "- Casos diseñados: 4\\n"
+                "- Casos ejecutados: 3\\n"
+                "- Pass: 2\\n"
+                "- Fail: 0\\n"
+                "- Blocked: 1\\n"
+                "Estado global: **No-Go**\\n",
+                encoding="utf-8",
+            )
+            with patch.object(validate_artifacts, "RESULTS_PATH", path):
+                errors = validate_artifacts.validate_results(rows)
+
+        self.assertTrue(any("1 cases with status Pass" in error for error in errors))
+        self.assertTrue(any("1 cases with status Fail" in error for error in errors))
+
     def test_bug_reports_require_core_sections(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             folder = Path(directory)
