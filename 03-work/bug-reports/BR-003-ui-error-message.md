@@ -1,38 +1,37 @@
-# Bug Report
+# Bug Report — ejemplo pendiente de validación
 
-**Título:** Mensaje de error no describe causa ni cómo corregir  
-**ID:** BR-003-ui-error-message
+**Título:** El mensaje de validación podría no explicar cómo corregir el error  
+**ID:** BR-003-ui-error-message  
+**Estado:** Pendiente de reproducción; no es un defecto confirmado.  
+**Severidad propuesta:** Baja  
+**Prioridad propuesta:** P3
 
 ## Ambiente
-- OS: Windows 11
-- Navegador/App: Chrome (última)
-- URL / Build / Versión: Sitio demo
+- Sistema operativo: Windows 11 (ambiente propuesto)
+- Navegador: Chrome (registrar versión durante la ejecución)
+- URL: https://www.demoblaze.com/
+- Build / versión: sitio público de demostración; versión no identificada
 
 ## Precondiciones
-- Usuario con carrito con al menos 1 ítem (si aplica)
+Tener disponible un formulario que permita provocar una validación de datos.
 
 ## Pasos para reproducir
-1. Ir a checkout / formulario de compra
-2. Borrar campos obligatorios (Nombre, Dirección, etc.)
-3. Enviar formulario
+1. Abrir el formulario de compra.
+2. Introducir datos inválidos o dejar un campo requerido vacío.
+3. Enviar el formulario y leer el mensaje de respuesta.
 
 ## Resultado actual
-- El sistema permite continuar / no muestra validación consistente.
+Hipótesis a verificar: el mensaje podría ser genérico y no identificar el campo o la acción correctiva.
 
 ## Resultado esperado
-- Bloquear envío y mostrar validaciones por campo con mensajes claros.
-
-## Severidad
-- Baja
-
-## Prioridad
-- P3
+El mensaje debe describir el problema de forma comprensible y orientar al usuario para corregirlo sin revelar información sensible.
 
 ## Frecuencia
-- Siempre
+Pendiente de medir mediante ejecuciones repetidas.
 
 ## Evidencia
-- Captura sugerida: `04-evidence/screenshots/BR-003-ui-error-message.png`
+- Ruta prevista: `04-evidence/screenshots/BR-003-ui-error-message.png`
+- No se adjunta captura porque el caso aún no fue ejecutado y verificado.
 
-## Notas
-- Recomendar validaciones client-side + server-side.
+## Criterio de cierre
+Reproducir el caso en el sitio indicado, adjuntar evidencia, registrar fecha y versión del navegador, y actualizar el estado con el resultado observado. Si no se reproduce, cerrar como no reproducible o descartar la hipótesis.

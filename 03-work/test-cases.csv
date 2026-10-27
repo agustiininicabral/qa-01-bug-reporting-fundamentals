@@ -1,46 +1,16 @@
 id,feature,title,priority,precondition,steps,expected,status
-TC-001,E2E Purchase Flow,Validar escenario 1,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-002,E2E Purchase Flow,Validar escenario 2,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-003,E2E Purchase Flow,Validar escenario 3,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-004,E2E Purchase Flow,Validar escenario 4,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-005,E2E Purchase Flow,Validar escenario 5,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-006,E2E Purchase Flow,Validar escenario 6,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-007,Cart,Validar escenario 7,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-008,Cart,Validar escenario 8,P1,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-009,Cart,Validar escenario 9,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-010,Cart,Validar escenario 10,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-011,UI/Validation,Validar escenario 11,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-012,UI/Validation,Validar escenario 12,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-013,UI/Validation,Validar escenario 13,P2,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-014,UI/Validation,Validar escenario 14,P3,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
-TC-015,UI/Validation,Validar escenario 15,P3,Sitio disponible; usuario no logueado (si aplica).,"1) Abrir sitio
-2) Ejecutar acción
-3) Validar resultado",Comportamiento esperado según historia de usuario,
+TC-001,Product listing,La página de inicio muestra productos,P1,Demo e-commerce accesible en https://www.demoblaze.com/,Abrir la página de inicio,La página carga y muestra categorías y productos,Not executed
+TC-002,Product details,La ficha corresponde al producto seleccionado,P1,TC-001 aprobado,Seleccionar un producto de la lista,El nombre y precio de la ficha coinciden con el producto elegido,Not executed
+TC-003,Cart,Agregar un producto al carrito,P1,TC-002 aprobado,Abrir un producto y seleccionar Add to cart,Se confirma la acción y el producto queda disponible en el carrito,Not executed
+TC-004,Cart,Agregar dos productos distintos,P1,TC-003 aprobado,Agregar dos productos distintos y abrir el carrito,El carrito muestra ambos productos sin duplicarlos incorrectamente,Not executed
+TC-005,Cart,El precio total coincide con los ítems,P1,Carrito con al menos dos productos,Comparar los precios de los ítems con el total mostrado,El total coincide con la suma de los precios de los productos,Not executed
+TC-006,Cart,Eliminar un producto del carrito,P1,Carrito con al menos un producto,Eliminar un producto y revisar la lista y el total,El producto desaparece y el total se recalcula correctamente,Not executed
+TC-007,Checkout,Abrir el formulario de compra,P1,Carrito con al menos un producto,Seleccionar Place Order,Se abre el formulario de compra,Not executed
+TC-008,Checkout,Validar campos obligatorios vacíos,P1,Formulario de compra abierto,Enviar el formulario sin completar campos obligatorios,El sistema bloquea la compra y comunica qué campos faltan,Not executed
+TC-009,Checkout,Validar datos incompletos,P1,Formulario de compra abierto,Completar solo algunos campos y enviar,El sistema indica los datos requeridos restantes sin perder lo ingresado,Not executed
+TC-010,Checkout,Completar compra con datos válidos,P1,Carrito con productos y datos de prueba disponibles,Completar los campos requeridos y confirmar la compra,Se muestra una confirmación con información coherente de la compra,Not executed
+TC-011,Cart,Revisar el carrito tras actualizar la página,P2,Carrito con productos,Actualizar la página y volver al carrito,El comportamiento de persistencia coincide con el contrato esperado del sitio,Not executed
+TC-012,Cart,Mostrar estado de carrito vacío,P2,Carrito sin productos,Eliminar todos los productos y revisar el carrito,El carrito indica que no hay productos y no muestra un total incorrecto,Not executed
+TC-013,UI/Validation,Mostrar mensajes de error comprensibles,P2,Un flujo genera una validación o error,Provocar una validación y leer el mensaje,El mensaje explica el problema y el siguiente paso cuando corresponda,Not executed
+TC-014,Navigation,Volver del carrito al catálogo,P2,Carrito abierto,Usar la navegación para volver al catálogo,La navegación funciona y el estado del carrito sigue el comportamiento esperado,Not executed
+TC-015,Checkout,Evitar confirmar dos veces una compra,P2,Formulario de compra con datos válidos,Confirmar la compra una sola vez y observar el resultado,Una única acción no genera órdenes duplicadas,Not executed

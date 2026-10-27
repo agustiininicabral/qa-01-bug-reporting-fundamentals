@@ -1,38 +1,37 @@
-# Bug Report
+# Bug Report — ejemplo pendiente de validación
 
-**Título:** Checkout permite enviar formulario con campos obligatorios vacíos  
-**ID:** BR-001-checkout-validation
+**Título:** Checkout no comunica claramente los campos obligatorios  
+**ID:** BR-001-checkout-validation  
+**Estado:** Pendiente de reproducción; no es un defecto confirmado.  
+**Severidad propuesta:** Alta  
+**Prioridad propuesta:** P1
 
 ## Ambiente
-- OS: Windows 11
-- Navegador/App: Chrome (última)
-- URL / Build / Versión: Sitio demo
+- Sistema operativo: Windows 11 (ambiente propuesto)
+- Navegador: Chrome (registrar versión durante la ejecución)
+- URL: https://www.demoblaze.com/
+- Build / versión: sitio público de demostración; versión no identificada
 
 ## Precondiciones
-- Usuario con carrito con al menos 1 ítem (si aplica)
+- El sitio de demostración está disponible y hay al menos un producto en el carrito.
 
 ## Pasos para reproducir
-1. Ir a checkout / formulario de compra
-2. Borrar campos obligatorios (Nombre, Dirección, etc.)
-3. Enviar formulario
+1. Abrir el carrito y seleccionar Place Order.
+2. Dejar vacíos los campos del formulario de compra.
+3. Intentar confirmar la compra.
 
 ## Resultado actual
-- El sistema permite continuar / no muestra validación consistente.
+Hipótesis a verificar: el formulario podría no identificar de forma clara todos los campos obligatorios.
 
 ## Resultado esperado
-- Bloquear envío y mostrar validaciones por campo con mensajes claros.
-
-## Severidad
-- Alta
-
-## Prioridad
-- P0
+La compra no debe completarse con datos obligatorios ausentes; el formulario debe indicar qué falta y conservar los datos válidos ya ingresados.
 
 ## Frecuencia
-- Siempre
+Pendiente de medir mediante ejecuciones repetidas.
 
 ## Evidencia
-- Captura sugerida: `04-evidence/screenshots/BR-001-checkout-validation.png`
+- Ruta prevista: `04-evidence/screenshots/BR-001-checkout-validation.png`
+- No se adjunta captura porque el caso aún no fue ejecutado y verificado.
 
-## Notas
-- Recomendar validaciones client-side + server-side.
+## Criterio de cierre
+Reproducir el caso en el sitio indicado, adjuntar evidencia, registrar fecha y versión del navegador, y actualizar el estado con el resultado observado. Si no se reproduce, cerrar como no reproducible o descartar la hipótesis.
